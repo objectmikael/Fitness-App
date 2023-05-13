@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body id="bespoke">
+
+    <div id="signUp"></div>
+
+    <div id="signUpForm">
+        <h1>Welcome to Bespoke Fitness</h1>
+        <h3>Sign Up to Continue</h3>
+        <form action="/signup" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input name="username"  id="username" type="text" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input name="password" id="password" type="password" required>
+            </div>
+            <br>
+            <div>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <br>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+
+
+    <video id="video" autoplay muted>
+        <source src="videos/bespokevideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        
+    
+    <script>
+        var vid = document.getElementById("video");
+        vid.onended = function() {
+            vid.style.display = "none" ;
+        };
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Back & Bis</title>
+</head>
+<body>
+    <h1>Back and Biceps</h1>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="4">Single Set</th>
+                <th colspan="7">Super Set</th>
+                <th colspan="9">Giant Set</th>
+                <th colspan="3">Single Set</th>
+                <th colspan="4">Single Set</th>
+                <th colspan="3">Single Set</th>
+                <th colspan="4">Single Set</th>
+                <th colspan="2">Single Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="4">Deadlift</th>
+                <th colspan="4">Dumbbell Pull-over</th>
+                <th colspan="3">Pull-up</th>
+                <th colspan="3">EZ Bar Row</th>
+                <th colspan="3">One Arm Row</th>
+                <th colspan="3">Reverse Fly</th>
+                <th colspan="3">Close Grip Chin-up</th>
+                <th colspan="4">Seated Bicep Curl</th>
+                <th colspan="3">1-1-2 Hammer Curl</th>
+                <th colspan="4">Neutral EZ Bar Curl</th>
+                <th colspan="2">Airplane Cobra</th>
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>8 REPS</th>               
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>        
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>   
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <%for (let i = 0; i<exercise.length; i++){%>
+                <tr>
+                    <td><a href="/details/backAndBis/<%=exercise[i]._id%>"><%=moment(exercise[i].date).format("ddd, MMM Do YYYY")%></a></td>
+                    <td> <%= exercise[i].dSet1%> </td>
+                    <td> <%= exercise[i].dSet2%> </td>
+                    <td> <%= exercise[i].dSet3%> </td>
+                    <td> <%= exercise[i].dSet4%> </td>
+                    <td> <%= exercise[i].dpSet1%> </td>
+                    <td> <%= exercise[i].dpSet2%> </td>
+                    <td> <%= exercise[i].dpSet3%> </td>
+                    <td> <%= exercise[i].dpSet4%> </td>
+                    <td> <%= exercise[i].puSet1%> </td>
+                    <td> <%= exercise[i].puSet2%> </td>
+                    <td> <%= exercise[i].puSet3%> </td>
+                    <td> <%= exercise[i].ezbrSet1%> </td>
+                    <td> <%= exercise[i].ezbrSet2%> </td>
+                    <td> <%= exercise[i].ezbrSet3%> </td>
+                    <td> <%= exercise[i].oarSet1%> </td>
+                    <td> <%= exercise[i].oarSet2%> </td>
+                    <td> <%= exercise[i].oarSet3%> </td>
+                    <td> <%= exercise[i].rfSet1%> </td>
+                    <td> <%= exercise[i].rfSet2%> </td>
+                    <td> <%= exercise[i].rfSet3%> </td>
+                    <td> <%= exercise[i].cgcuSet1%> </td>   
+                    <td> <%= exercise[i].cgcuSet2%> </td>   
+                    <td> <%= exercise[i].cgcuSet3%> </td>   
+                    <td> <%= exercise[i].sbcSet1%> </td>   
+                    <td> <%= exercise[i].sbcSet2%> </td>   
+                    <td> <%= exercise[i].sbcSet3%> </td>   
+                    <td> <%= exercise[i].sbcSet4%> </td>   
+                    <td> <%= exercise[i].hcSet1%> </td>   
+                    <td> <%= exercise[i].hcSet2%> </td>   
+                    <td> <%= exercise[i].hcSet3%> </td>   
+                    <td> <%= exercise[i].nezbcSet1%> </td>   
+                    <td> <%= exercise[i].nezbcSet2%> </td>   
+                    <td> <%= exercise[i].nezbcSet3%> </td>   
+                    <td> <%= exercise[i].nezbcSet4%> </td>   
+                    <td> <%= exercise[i].acSet1%> </td>   
+                    <td> <%= exercise[i].acSet2%> </td>      
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <form action="/addBackAndBisWorkout" method="get">
+        <button>Add New Workout</button>
+    </form>
+
+    <br>
+    <br>
+
+    <a href="/home"><button>Back to Homepage</button></a>
+
+
+
+
+    
+
+    <!-- <br>
+
+    <div id="maxPercentages">
+        <h1>Max Deadlift: < maxDeadlift[0].dSet4%> lbs</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">Percentages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> < .05*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .1*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .15*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .2*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .25*(maxDeadlift[0].dSet4)%> </td>
+                </tr>
+                <tr>
+                    <td> < .30*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .35*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .40*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .45*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .50*(maxDeadlift[0].dSet4)%> </td>
+                </tr>
+                <tr>
+                    <td> < .55*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .60*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .65*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .70*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .75*(maxDeadlift[0].dSet4)%> </td>
+                </tr>
+                <tr>
+                    <td> < .80*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .85*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .90*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < .95*(maxDeadlift[0].dSet4)%> </td>
+                    <td> < (maxDeadlift[0].dSet4)%> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    
+</body>
+</html>

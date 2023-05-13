@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: slategray;
+    width: 100vw;
+    height: 100vh;
+}
+
+#homepage{
+    /* background-color: slategray; */
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+table thead #set{
+    background-color: black;
+    color: white;
+}
+table thead #exercise{
+    background-color: green;
+}
+table thead #reps{
+    background-color: gray;
+}
+table tbody td{
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+}
+
+#title{
+    font-family: 'Kavoon', cursive;
+    font-size: 3rem;
+    color: white;
+}
+
+.homeContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 0, 0, 0.516);
+    
+}
+
+#imgContainer{
+    /* border: 2px solid black; */
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kavoon', cursive;
+    /* font-size: 100%; */
+    /* background-color: black; */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+#infoContainer{
+    border-top: 1px solid white;
+    width: fit-content;
+    height: 75%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#infoContainer h1{
+    margin: 0;
+}
+
+/* #img{
+    width: 20%;
+    height: 80%;
+    margin-left: 1%;
+} */
+.homeContainer img{
+    width: 100%;
+    height: 100%;   
+    border: 5px solid black;
+    margin-top: 5px;
+}
+
+#maxPercentages{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#maxPercentages h1{
+    margin-right: 2%;
+    
+}
+
+
+
+
+#exerciseContainer{
+    display: flex;
+}
+
+#exerciseImg img{
+    height: 150px;
+    width: 150px;
+}
+
+#bespoke{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/4EB1285E-78E2-4773-B258-F1BCC15E7BDF_1_105_c.jpeg");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    backdrop-filter: brightness(60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#bespoke video{
+    width: 80vw;
+    height: 80vh;
+    /* background-color: black; */
+    position: absolute;
+    z-index: 10;
+}
+
+#bespoke h1{
+    font-family: 'Kavoon', cursive;
+    color: white;
+    font-size: 3rem;
+}
+
+#signUp{
+    width: 30vw;
+    height: 65vh;
+    border: 8px solid rgba(255, 0, 0, 0.9);
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.6;
+}
+
+
+
+#signUpForm{
+    width: 45vw;
+    height: 75vh;
+    position: absolute;
+    z-index: 7;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#signUpForm a{
+    color: red
+}
+
+#loginBespoke{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/B950F035-9A29-4C7E-A13E-8CEADE78E071_1_105_c.jpeg");
+    background-size: contain ;
+    background-position: center;
+    backdrop-filter: brightness(60%);
+    background-repeat: no-repeat;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginBespoke h1{
+    font-family: 'Kavoon', cursive;
+    color: white;
+    font-size: 3rem;
+}
+
+#login{
+    width: 30vw;
+    height: 65vh;
+    border: 8px solid rgba(255, 0, 0, 0.9);
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.6;
+}
+
+
+
+#loginForm{
+    width: 45vw;
+    height: 75vh;
+    position: absolute;
+    z-index: 7;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loginForm a{
+    color: red
+}
+
+
+#clean{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#exerciseContainerClean{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#exerciseContainerClean #exerciseImg{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#cleanBackButton button{
+    margin-left: 0;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Squat Clean</title>
+</head>
+<body>
+    <h1> Update Workout</h1>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="9">Super Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="3">High Pull</th>
+                <th colspan="3">Power Clean</th>
+                <th colspan="3">Squat Clean</th>
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>3 REPS</th>
+                <th>3 REPS</th>
+                <th>3 REPS</th>
+                <th>2 REPS</th>               
+                <th>1 REPS</th>
+                <th>1 REPS</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td><%=exercise.date%></td>
+                <td> <%= exercise.hpSet1%> </td>
+                <td> <%= exercise.hpSet2%> </td>
+                <td> <%= exercise.hpSet3%> </td>
+                <td> <%= exercise.pcSet1%> </td>
+                <td> <%= exercise.pcSet2%> </td>
+                <td> <%= exercise.pcSet3%> </td>
+                <td> <%= exercise.scSet1%> </td>
+                <td> <%= exercise.scSet2%> </td>
+                <td> <%= exercise.scSet3%> </td>      
+            </tr>
+            <tr id="records">
+                <form action="/updateSquatCleanLog/<%=exercise._id%>" method="post">
+                    <td> <input name="date" id="date" type="date" value="<%=exercise.date%>"> </td>
+                    <td> <input name="hpSet1" id="hpSet1" type="number" value="<%= exercise.hpSet1%>"> </td>
+                    <td> <input name="hpSet2" id="hpSet2" type="number" value="<%= exercise.hpSet2%>"> </td>
+                    <td> <input name="hpSet3" id="hpSet3" type="number" value="<%= exercise.hpSet3%>"> </td>
+                    <td> <input name="pcSet1" id="pcSet1" type="number" value="<%= exercise.pcSet1%>"> </td>
+                    <td> <input name="pcSet2" id="pcSet2" type="number" value="<%= exercise.pcSet2%>"> </td>
+                    <td> <input name="pcSet3" id="pcSet3" type="number" value="<%= exercise.pcSet3%>"> </td>
+                    <td> <input name="scSet1" id="scSet1" type="number" value="<%= exercise.scSet1%>"> </td>
+                    <td> <input name="scSet2" id="scSet2" type="number" <%= exercise.scSet2%>> </td>
+                    <td> <input name="scSet3" id="scSet3" type="number" value="<%= exercise.scSet3%>"> </td>
+                    <button type="submit">Update</button>
+                </form>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <a href="/details/squatClean/<%=exercise._id%>"><button>Back</button></a>
+    
+</body>
+</html>

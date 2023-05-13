@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Back & Bis</title>
+</head>
+<body>
+    <h1> Update Workout</h1>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="4">Single Set</th>
+                <th colspan="7">Super Set</th>
+                <th colspan="9">Giant Set</th>
+                <th colspan="3">Single Set</th>
+                <th colspan="4">Single Set</th>
+                <th colspan="3">Single Set</th>
+                <th colspan="4">Single Set</th>
+                <th colspan="2">Single Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="4">Deadlift</th>
+                <th colspan="4">Dumbbell Pull-over</th>
+                <th colspan="3">Pull-up</th>
+                <th colspan="3">EZ Bar Row</th>
+                <th colspan="3">One Arm Row</th>
+                <th colspan="3">Reverse Fly</th>
+                <th colspan="3">Close Grip Chin-up</th>
+                <th colspan="4">Seated Bicep Curl</th>
+                <th colspan="3">1-1-2 Hammer Curl</th>
+                <th colspan="4">Neutral EZ Bar Curl</th>
+                <th colspan="2">Airplane Cobra</th>
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>8 REPS</th>               
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>        
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>   
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td><%=exercise.date%></td>
+                <td> <%= exercise.dSet1%> </td>
+                <td> <%= exercise.dSet2%> </td>
+                <td> <%= exercise.dSet3%> </td>
+                <td> <%= exercise.dSet4%> </td>
+                <td> <%= exercise.dpSet1%> </td>
+                <td> <%= exercise.dpSet2%> </td>
+                <td> <%= exercise.dpSet3%> </td>
+                <td> <%= exercise.dpSet4%> </td>
+                <td> <%= exercise.puSet1%> </td>
+                <td> <%= exercise.puSet2%> </td>
+                <td> <%= exercise.puSet3%> </td>
+                <td> <%= exercise.ezbrSet1%> </td>
+                <td> <%= exercise.ezbrSet2%> </td>
+                <td> <%= exercise.ezbrSet3%> </td>
+                <td> <%= exercise.oarSet1%> </td>
+                <td> <%= exercise.oarSet2%> </td>
+                <td> <%= exercise.oarSet3%> </td>
+                <td> <%= exercise.rfSet1%> </td>
+                <td> <%= exercise.rfSet2%> </td>
+                <td> <%= exercise.rfSet3%> </td>
+                <td> <%= exercise.cgcuSet1%> </td>   
+                <td> <%= exercise.cgcuSet2%> </td>   
+                <td> <%= exercise.cgcuSet3%> </td>   
+                <td> <%= exercise.sbcSet1%> </td>   
+                <td> <%= exercise.sbcSet2%> </td>   
+                <td> <%= exercise.sbcSet3%> </td>   
+                <td> <%= exercise.sbcSet4%> </td>   
+                <td> <%= exercise.hcSet1%> </td>   
+                <td> <%= exercise.hcSet2%> </td>   
+                <td> <%= exercise.hcSet3%> </td>   
+                <td> <%= exercise.nezbcSet1%> </td>   
+                <td> <%= exercise.nezbcSet2%> </td>   
+                <td> <%= exercise.nezbcSet3%> </td>   
+                <td> <%= exercise.nezbcSet4%> </td>   
+                <td> <%= exercise.acSet1%> </td>   
+                <td> <%= exercise.acSet2%> </td>      
+            </tr>
+            <tr id="records">
+                <form action="/updateBackAndBisLog/<%= exercise._id%>" method="post">
+                    <td> <input name="date" id="date" type="date" value="<%=exercise.date%>"> </td>
+                    <td> <input name="dSet1" id="dSet1" type="number" value="<%= exercise.dSet1%>"> </td>
+                    <td> <input name="dSet2" id="dSet2" type="number" value="<%= exercise.dSet2%>"> </td>
+                    <td> <input name="dSet3" id="dSet3" type="number" value="<%= exercise.dSet3%>"> </td>
+                    <td> <input name="dSet4" id="dSet4" type="number" value="<%= exercise.dSet4%>"> </td>
+                    <td> <input name="dpSet1" id="dpSet1" type="number" value="<%= exercise.dpSet1%>"> </td>
+                    <td> <input name="dpSet2" id="dpSet2" type="number" value="<%= exercise.dpSet2%>"> </td>
+                    <td> <input name="dpSet3" id="dpSet3" type="number" value="<%= exercise.dpSet3%>"> </td>
+                    <td> <input name="dpSet4" id="dpSet4" type="number" value="<%= exercise.dpSet4%>"> </td>
+                    <td> <input name="puSet1" id="puSet1" type="number" value="<%= exercise.puSet1%>"> </td>
+                    <td> <input name="puSet2" id="puSet2" type="number" value="<%= exercise.puSet2%>"> </td>
+                    <td> <input name="puSet3" id="puSet3" type="number" value="<%= exercise.puSet3%>"> </td>
+                    <td> <input name="ezbrSet1" id="ezbrSet1" type="number" value="<%= exercise.ezbrSet1%>"> </td>
+                    <td> <input name="ezbrSet2" id="ezbrSet2" type="number" value="<%= exercise.ezbrSet2%>"> </td>
+                    <td> <input name="ezbrSet3" id="ezbrSet3" type="number" value="<%= exercise.ezbrSet3%>"> </td>
+                    <td> <input name="oarSet1" id="oarSet1" type="number" value="<%= exercise.oarSet1%>"> </td>
+                    <td> <input name="oarSet2" id="oarSet2" type="number" value="<%= exercise.oarSet2%>"> </td>
+                    <td> <input name="oarSet3" id="oarSet3" type="number" value="<%= exercise.oarSet3%>"> </td>
+                    <td> <input name="rfSet1" id="rfSet1" type="number" value="<%= exercise.rfSet1%> "> </td>
+                    <td> <input name="rfSet2" id="rfSet2" type="number" value="<%= exercise.rfSet2%> "> </td>
+                    <td> <input name="rfSet3" id="rfSet3" type="number" value="<%= exercise.rfSet3%> "> </td>
+                    <td> <input name="cgcuSet1" id="cgcuSet1" type="number" value="<%= exercise.cgcuSet1%> "> </td>
+                    <td> <input name="cgcuSet2" id="cgcuSet2" type="number" value="<%= exercise.cgcuSet2%> "> </td>
+                    <td> <input name="cgcuSet3" id="cgcuSet3" type="number" value="<%= exercise.cgcuSet3%> "> </td>
+                    <td> <input name="sbcSet1" id="sbcSet1" type="number" value="<%= exercise.sbcSet1%>"> </td>
+                    <td> <input name="sbcSet2" id="sbcSet2" type="number" value="<%= exercise.sbcSet2%>"> </td>
+                    <td> <input name="sbcSet3" id="sbcSet3" type="number" value="<%= exercise.sbcSet3%>"> </td>
+                    <td> <input name="sbcSet4" id="sbcSet4" type="number" value="<%= exercise.sbcSet4%>"> </td>
+                    <td> <input name="hcSet1" id="hcSet1" type="number" value="<%= exercise.hcSet1%>"> </td>
+                    <td> <input name="hcSet2" id="hcSet2" type="number" value="<%= exercise.hcSet2%>"> </td>
+                    <td> <input name="hcSet3" id="hcSet3" type="number" value="<%= exercise.hcSet3%>"> </td>
+                    <td> <input name="nezbcSet1" id="nezbcSet1" type="number" value="<%= exercise.nezbcSet1%>"> </td>
+                    <td> <input name="nezbcSet2" id="nezbcSet2" type="number" value="<%= exercise.nezbcSet2%>"> </td>
+                    <td> <input name="nezbcSet3" id="nezbcSet3" type="number" value="<%= exercise.nezbcSet3%>"> </td>
+                    <td> <input name="nezbcSet4" id="nezbcSet4" type="number" value="<%= exercise.nezbcSet4%>"> </td>
+                    <td> <input name="acSet1" id="acSet1" type="number" value="<%= exercise.acSet1%>"> </td>
+                    <td> <input name="acSet2" id="acSet2" type="number" value="<%= exercise.acSet2%>"> </td>
+                    <button type="submit">Update</button>
+                </form>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <a href="/home"><button>Back to Homepage</button></a>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Back & Bis</title>
+</head>
+<body>
+    <h1>Workout Details</h1>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="4">Single Set</th>
+                <th colspan="7">Super Set</th>
+                <th colspan="9">Giant Set</th>
+                <th colspan="3">Single Set</th>
+                <th colspan="4">Single Set</th>
+                <th colspan="3">Single Set</th>
+                <th colspan="4">Single Set</th>
+                <th colspan="2">Single Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="4">Deadlift</th>
+                <th colspan="4">Dumbbell Pull-over</th>
+                <th colspan="3">Pull-up</th>
+                <th colspan="3">EZ Bar Row</th>
+                <th colspan="3">One Arm Row</th>
+                <th colspan="3">Reverse Fly</th>
+                <th colspan="3">Close Grip Chin-up</th>
+                <th colspan="4">Seated Bicep Curl</th>
+                <th colspan="3">1-1-2 Hammer Curl</th>
+                <th colspan="4">Neutral EZ Bar Curl</th>
+                <th colspan="2">Airplane Cobra</th>
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>8 REPS</th>               
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>        
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>   
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+            </tr>
+
+        </thead>
+        <tbody>           
+            <tr>
+                <td><%=exercise.date%></td>
+                <td> <%= exercise.dSet1%> </td>
+                <td> <%= exercise.dSet2%> </td>
+                <td> <%= exercise.dSet3%> </td>
+                <td> <%= exercise.dSet4%> </td>
+                <td> <%= exercise.dpSet1%> </td>
+                <td> <%= exercise.dpSet2%> </td>
+                <td> <%= exercise.dpSet3%> </td>
+                <td> <%= exercise.dpSet4%> </td>
+                <td> <%= exercise.puSet1%> </td>
+                <td> <%= exercise.puSet2%> </td>
+                <td> <%= exercise.puSet3%> </td>
+                <td> <%= exercise.ezbrSet1%> </td>
+                <td> <%= exercise.ezbrSet2%> </td>
+                <td> <%= exercise.ezbrSet3%> </td>
+                <td> <%= exercise.oarSet1%> </td>
+                <td> <%= exercise.oarSet2%> </td>
+                <td> <%= exercise.oarSet3%> </td>
+                <td> <%= exercise.rfSet1%> </td>
+                <td> <%= exercise.rfSet2%> </td>
+                <td> <%= exercise.rfSet3%> </td>
+                <td> <%= exercise.cgcuSet1%> </td>   
+                <td> <%= exercise.cgcuSet2%> </td>   
+                <td> <%= exercise.cgcuSet3%> </td>   
+                <td> <%= exercise.sbcSet1%> </td>   
+                <td> <%= exercise.sbcSet2%> </td>   
+                <td> <%= exercise.sbcSet3%> </td>   
+                <td> <%= exercise.sbcSet4%> </td>   
+                <td> <%= exercise.hcSet1%> </td>   
+                <td> <%= exercise.hcSet2%> </td>   
+                <td> <%= exercise.hcSet3%> </td>   
+                <td> <%= exercise.nezbcSet1%> </td>   
+                <td> <%= exercise.nezbcSet2%> </td>   
+                <td> <%= exercise.nezbcSet3%> </td>   
+                <td> <%= exercise.nezbcSet4%> </td>   
+                <td> <%= exercise.acSet1%> </td>   
+                <td> <%= exercise.acSet2%> </td>      
+            </tr>          
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <form action="/updateBackAndBisWorkout/<%=exercise._id%>" method="get">
+        <button>Update Workout</button>
+    </form>
+    
+    <br>
+
+    <form action="/deleteBackAndBisWorkout/<%=exercise._id%>?_method=DELETE" method="POST">
+        <button>Delete Workout</button>
+    </form>
+
+    <br>
+
+    <a href="/home"><button>Back to Homepage</button></a>
+
+</body>
+</html>

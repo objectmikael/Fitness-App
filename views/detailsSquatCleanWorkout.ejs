@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Squat Clean</title>
+</head>
+<body>
+    <h1>Workout Details</h1>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="9">Super Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="3">High Pull</th>
+                <th colspan="3">Power Clean</th>
+                <th colspan="3">Squat Clean</th>
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>3 REPS</th>
+                <th>3 REPS</th>
+                <th>3 REPS</th>
+                <th>2 REPS</th>               
+                <th>1 REPS</th>
+                <th>1 REPS</th>
+            </tr>
+
+        </thead>
+        <tbody>           
+            <tr>
+                <td><%=exercise.date%></td>
+                <td> <%= exercise.hpSet1%> </td>
+                <td> <%= exercise.hpSet2%> </td>
+                <td> <%= exercise.hpSet3%> </td>
+                <td> <%= exercise.pcSet1%> </td>
+                <td> <%= exercise.pcSet2%> </td>
+                <td> <%= exercise.pcSet3%> </td>
+                <td> <%= exercise.scSet1%> </td>
+                <td> <%= exercise.scSet2%> </td>
+                <td> <%= exercise.scSet3%> </td>      
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <form action="/updateSquatCleanWorkout/<%=exercise._id%>" method="get">
+        <button>Update Workout</button>
+    </form>
+    
+    <br>
+
+    <form action="/deleteSquatCleanWorkout/<%=exercise._id%>?_method=DELETE" method="POST">
+        <button>Delete Workout</button>
+    </form>
+
+    <br>
+
+    <a href="/squatClean"><button>Back</button></a>
+
+    <br>
+    <br>
+
+    <a href="/home"><button>Back to Homepage</button></a>
+
+</body>
+</html>

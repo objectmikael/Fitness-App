@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shoulders</title>
+</head>
+<body>
+    <h1>Shoulders</h1>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="4">Single Set</th>
+                <th colspan="7">Super Set</th>
+                <th colspan="9">Giant Set</th>
+                <th colspan="7">Super Set</th>
+                <th colspan="2">Super Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="4">Shoulder Press</th>
+                <th colspan="3">Lateral Raise</th>
+                <th colspan="4">Upright Row</th>
+                <th colspan="3">EZ Bar Underhand Press</th>
+                <th colspan="3">1-1-2 Front Raise</th>
+                <th colspan="3">Rear Delt Raise</th>
+                <th colspan="4">Dumbbell Shrug</th>
+                <th colspan="3">Dumbbell Scap Trap</th>
+                <th colspan="1">Sagi-Six-Way</th>
+                <th colspan="1">Tuck and Roll</th>
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>8 REPS</th>                      
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>8 REPS</th>                      
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <%for (let i = 0; i<exercise.length; i++){%>
+                <tr>
+                    <td><a href="/details/shoulders/<%=exercise[i]._id%>"><%=moment(exercise[i].date).format("ddd, MMM Do YYYY")%></a></td>
+                    <td> <%= exercise[i].spSet1%> </td>
+                    <td> <%= exercise[i].spSet2%> </td>
+                    <td> <%= exercise[i].spSet3%> </td>
+                    <td> <%= exercise[i].spSet4%> </td>
+                    <td> <%= exercise[i].lrSet1%> </td>
+                    <td> <%= exercise[i].lrSet2%> </td>
+                    <td> <%= exercise[i].lrSet3%> </td>
+                    <td> <%= exercise[i].urSet1%> </td>
+                    <td> <%= exercise[i].urSet2%> </td>
+                    <td> <%= exercise[i].urSet3%> </td>
+                    <td> <%= exercise[i].urSet4%> </td>
+                    <td> <%= exercise[i].ezbupSet1%> </td>
+                    <td> <%= exercise[i].ezbupSet2%> </td>
+                    <td> <%= exercise[i].ezbupSet3%> </td>
+                    <td> <%= exercise[i].frSet1%> </td>
+                    <td> <%= exercise[i].frSet2%> </td>
+                    <td> <%= exercise[i].frSet3%> </td>
+                    <td> <%= exercise[i].rdrSet1%> </td>
+                    <td> <%= exercise[i].rdrSet2%> </td>
+                    <td> <%= exercise[i].rdrSet3%> </td>                 
+                    <td> <%= exercise[i].dsSet1%> </td>   
+                    <td> <%= exercise[i].dsSet2%> </td>   
+                    <td> <%= exercise[i].dsSet3%> </td>   
+                    <td> <%= exercise[i].dsSet4%> </td>   
+                    <td> <%= exercise[i].dstSet1%> </td>   
+                    <td> <%= exercise[i].dstSet2%> </td>   
+                    <td> <%= exercise[i].dstSet3%> </td>   
+                    <td> <%= exercise[i].sswSet1%> </td>   
+                    <td> <%= exercise[i].trSet1%> </td>       
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <form action="/addShouldersWorkout" method="get">
+        <button>Add New Workout</button>
+    </form>
+
+    <br>
+    <br>
+
+    <a href="/home"><button>Back to Homepage</button></a>
+
+
+
+
+
+
+
+    <!-- <br>
+
+    <div id="maxPercentages">
+        <h1>Max Shoulder Press: < maxShoulderPress[0].spSet4%> lbs</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">Percentages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> < .05*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .1*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .15*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .2*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .25*(maxShoulderPress[0].spSet4)%> </td>
+                </tr>
+                <tr>
+                    <td> < .30*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .35*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .40*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .45*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .50*(maxShoulderPress[0].spSet4)%> </td>
+                </tr>
+                <tr>
+                    <td> < .55*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .60*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .65*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .70*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .75*(maxShoulderPress[0].spSet4)%> </td>
+                </tr>
+                <tr>
+                    <td> < .80*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .85*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .90*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < .95*(maxShoulderPress[0].spSet4)%> </td>
+                    <td> < (maxShoulderPress[0].spSet4)%> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    
+</body>
+</html>

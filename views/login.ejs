@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body id="loginBespoke">
+
+    <div id="login"></div>
+
+    <div id="loginForm">
+        <h1>Bespoke Fitness Portal</h1>
+        <h3>Login to Your Account</h3>
+
+        <% if (message) { %>
+            <div class="alert alert-danger"><%= message %></div>
+          <% } %>
+          
+        <form action="/login" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input name="username"  id="username" type="text" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input name="password" id="password" type="password" required>
+            </div>
+            <br>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <br>
+        <p>Don't have an account? <a href="/signup" id="signUpLink">Sign Up</a></p>
+    </div>
+ 
+</body>
+</html>

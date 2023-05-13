@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Add Workout</title>
+</head>
+<body id="clean">
+    <h1>Squat Clean</h1>
+
+    <br>
+
+    <form action="/updateSquatClean" method="post">
+        <input name="date" id="date" type="date">   
+
+    <br>
+    <br>
+
+    <div id="exerciseContainerClean">
+        <div id="exerciseTable">
+            <table>
+                <thead>
+                    <tr id="set">
+                        <th colspan="9"> Super Set</th>
+                    </tr>
+                    <tr id="exercise">
+                        <th colspan="3">High Pull</th>
+                        <th colspan="3">Power Clean</th>
+                        <th colspan="3">Squat Clean</th>
+                    </tr>
+                    <tr id="reps">
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                        <th>3 REPS</th>
+                        <th>3 REPS</th>
+                        <th>3 REPS</th>
+                        <th>2 REPS</th>               
+                        <th>1 REPS</th>
+                        <th>1 REPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="records">
+                        <form action="/updateSquatClean" method="post">
+                            <td> <input name="hpSet1" id="hpSet1" type="number"> </td>
+                            <td> <input name="hpSet2" id="hpSet2" type="number"> </td>
+                            <td> <input name="hpSet3" id="hpSet3" type="number"> </td>
+                            <td> <input name="pcSet1" id="pcSet1" type="number"> </td>
+                            <td> <input name="pcSet2" id="pcSet2" type="number"> </td>
+                            <td> <input name="pcSet3" id="pcSet3" type="number"> </td>
+                            <td> <input name="scSet1" id="scSet1" type="number"> </td>
+                            <td> <input name="scSet2" id="scSet2" type="number"> </td>
+                            <td> <input name="scSet3" id="scSet3" type="number"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div id="exerciseImg">
+            <img src="<%=apiData[1053].gifUrl%>" alt="">
+            <img src="<%=apiData[104].gifUrl%>" alt="">
+        </div>
+
+    </div>
+
+    <br>
+
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="cleanBackButton">
+        <a href="/squatClean"><button>Back</button></a>
+    </div>
+        
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="9">Super Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="3">High Pull</th>
+                <th colspan="3">Power Clean</th>
+                <th colspan="3">Squat Clean</th>
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>3 REPS</th>
+                <th>3 REPS</th>
+                <th>3 REPS</th>
+                <th>2 REPS</th>               
+                <th>1 REPS</th>
+                <th>1 REPS</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr id="records">
+                <form action="/updateSquatClean" method="post">
+                    <td> <input name="date" id="date" type="date"> </td>
+                    <td> <input name="hpSet1" id="hpSet1" type="number"> </td>
+                    <td> <input name="hpSet2" id="hpSet2" type="number"> </td>
+                    <td> <input name="hpSet3" id="hpSet3" type="number"> </td>
+                    <td> <input name="pcSet1" id="pcSet1" type="number"> </td>
+                    <td> <input name="pcSet2" id="pcSet2" type="number"> </td>
+                    <td> <input name="pcSet3" id="pcSet3" type="number"> </td>
+                    <td> <input name="scSet1" id="scSet1" type="number"> </td>
+                    <td> <input name="scSet2" id="scSet2" type="number"> </td>
+                    <td> <input name="scSet3" id="scSet3" type="number"> </td>
+                    <button type="submit">Submit</button>
+                </form>
+            </tr>
+        </tbody>
+    </table> -->
+        
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Legs</title>
+</head>
+<body>
+    <h1>Workout Details</h1>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="4">Single Set</th>
+                <th colspan="6">Super Set</th>
+                <th colspan="9">Giant Set</th>
+                <th colspan="6">Single Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="4">Back Squat</th>
+                <th colspan="3">Alternating Lunge</th>
+                <th colspan="3">Step-up to Reverse Lunge</th>
+                <th colspan="3">Parallel Squat</th>
+                <th colspan="3">Bulgarian Squat</th>
+                <th colspan="3">Straight Leg Deadlift</th>
+                <th colspan="2">Single Leg Calf Raises</th>
+                <th colspan="2">Seated Calf Raise</th>
+                <th colspan="2">In and Outs</th>
+
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>20 REPS</th>
+                <th>20 REPS</th>
+                <th>20 REPS</th>
+                <th>20 REPS</th>
+                <th>20 REPS</th>
+                <th>20 REPS</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td><%=exercise.date%></td>
+                <td> <%= exercise.bsSet1%> </td>
+                <td> <%= exercise.bsSet2%> </td>
+                <td> <%= exercise.bsSet3%> </td>
+                <td> <%= exercise.bsSet4%> </td>
+                <td> <%= exercise.alSet1%> </td>
+                <td> <%= exercise.alSet2%> </td>
+                <td> <%= exercise.alSet3%> </td>
+                <td> <%= exercise.surlSet1%> </td>
+                <td> <%= exercise.surlSet2%> </td>
+                <td> <%= exercise.surlSet3%> </td>
+                <td> <%= exercise.psSet1%> </td>
+                <td> <%= exercise.psSet2%> </td>
+                <td> <%= exercise.psSet3%> </td>
+                <td> <%= exercise.bulsSet1%> </td>
+                <td> <%= exercise.bulsSet2%> </td>
+                <td> <%= exercise.bulsSet3%> </td>
+                <td> <%= exercise.sldSet1%> </td>
+                <td> <%= exercise.sldSet2%> </td>
+                <td> <%= exercise.sldSet3%> </td>
+                <td> <%= exercise.slcrSet1%> </td>
+                <td> <%= exercise.slcrSet2%> </td>   
+                <td> <%= exercise.scrSet1%> </td>   
+                <td> <%= exercise.scrSet2%> </td>   
+                <td> <%= exercise.ioSet1%> </td>   
+                <td> <%= exercise.ioSet2%> </td>       
+            </tr>           
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <form action="/updateLegsWorkout/<%=exercise._id%>" method="get">
+        <button>Update Workout</button>
+    </form>
+    
+    <br>
+
+    <form action="/deleteLegsWorkout/<%=exercise._id%>?_method=DELETE" method="POST">
+        <button>Delete Workout</button>
+    </form>
+
+    <br>
+
+    <a href="/home"><button>Back to Homepage</button></a>
+
+</body>
+</html>

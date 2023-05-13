@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Chest & Tris</title>
+</head>
+<body>
+    <h1> Update Workout</h1>
+
+    <br>
+
+    <form action="/updateChestAndTrisLog/<%=exercise._id%>" method="post">
+        <input name="date" id="date" type="date" value="<%=exercise.date%>">   
+
+    <br>
+    <br>
+
+    <div id="exerciseContainer">
+        <div id="exerciseTable">
+            <table>
+                <thead>
+                    <tr id="set">
+                        <th colspan="4"> Single Set</th>
+                    </tr>
+                    <tr id="exercise">
+                        <th colspan="4">Dumbbell Chest Press</th>
+                    </tr>
+                    <tr id="reps">
+                        <th>15 REPS</th>
+                        <th>12 REPS</th>
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <%= exercise.dcpSet1%> </td>
+                        <td> <%= exercise.dcpSet2%> </td>
+                        <td> <%= exercise.dcpSet3%> </td>
+                        <td> <%= exercise.dcpSet4%> </td>
+                    </tr>
+                    <tr id="records">
+                        <form action="/updateChestAndTris" method="post">
+                            <td> <input name="dcpSet1" id="dcpSet1" type="number" value="<%= exercise.dcpSet1%>"> </td>
+                            <td> <input name="dcpSet2" id="dcpSet2" type="number" value="<%= exercise.dcpSet2%>"> </td>
+                            <td> <input name="dcpSet3" id="dcpSet3" type="number" value="<%= exercise.dcpSet3%>"> </td>
+                            <td> <input name="dcpSet4" id="dcpSet4" type="number" value="<%= exercise.dcpSet4%>"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div id="exerciseImg">
+            <img src="<%=apiData[473].gifUrl%>" alt="">
+        </div>
+
+    </div>
+
+
+    <div id="exerciseContainer">
+        <div id="exerciseTable">
+            <table>
+                <thead>
+                    <tr id="set">
+                        <th colspan="7"> Super Set</th>
+                    </tr>
+                    <tr id="exercise">
+                        <th colspan="3">Incline Dumbbell Fly</th>
+                        <th colspan="4">Incline Dumbbell Press</th>
+                    </tr>
+                    <tr id="reps">
+                        <th>15 REPS</th>
+                        <th>12 REPS</th>
+                        <th>8 REPS</th>               
+                        <th>15 REPS</th>
+                        <th>12 REPS</th>
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <%= exercise.idfSet1%> </td>
+                        <td> <%= exercise.idfSet2%> </td>
+                        <td> <%= exercise.idfSet3%> </td>
+                        <td> <%= exercise.idpSet1%> </td>
+                        <td> <%= exercise.idpSet2%> </td>
+                        <td> <%= exercise.idpSet3%> </td>
+                        <td> <%= exercise.idpSet4%> </td>
+                    </tr>
+                    <tr id="records">
+                        <td> <input name="idfSet1" id="idfSet1" type="number" value="<%= exercise.idfSet1%>"> </td>
+                        <td> <input name="idfSet2" id="idfSet2" type="number" value="<%= exercise.idfSet2%>"> </td>
+                        <td> <input name="idfSet3" id="idfSet3" type="number" value="<%= exercise.idfSet3%>"> </td>
+                        <td> <input name="idpSet1" id="idpSet1" type="number" value="<%= exercise.idpSet1%>"> </td>
+                        <td> <input name="idpSet2" id="idpSet2" type="number" value="<%= exercise.idpSet2%>"> </td>
+                        <td> <input name="idpSet3" id="idpSet3" type="number" value="<%= exercise.idpSet3%>"> </td>
+                        <td> <input name="idpSet4" id="idpSet4" type="number" value="<%= exercise.idpSet4%>"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div id="exerciseImg">
+            <img src="<%=apiData[524].gifUrl%>" alt="">
+            <img src="<%=apiData[538].gifUrl%>" alt="">
+        </div>
+
+    </div>
+
+    <div id="exerciseContainer">
+        <div id="exerciseTable">
+            <table>
+                <thead>
+                    <tr id="set">
+                        <th colspan="9"> Giant Set</th>
+                    </tr>
+                    <tr id="exercise">
+                        <th colspan="3">Close Grip Press</th>
+                        <th colspan="3">Partial Chest Fly</th>
+                        <th colspan="3">Decline Push-up</th>
+                    </tr>
+                    <tr id="reps">
+                        <th>15 REPS</th>
+                        <th>12 REPS</th>
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                        <th>FAILURE</th>
+                        <th>FAILURE</th>
+                        <th>FAILURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <%= exercise.cgpSet1%> </td>
+                        <td> <%= exercise.cgpSet2%> </td>
+                        <td> <%= exercise.cgpSet3%> </td>
+                        <td> <%= exercise.pcfSet1%> </td>
+                        <td> <%= exercise.pcfSet2%> </td>
+                        <td> <%= exercise.pcfSet3%> </td>
+                        <td> <%= exercise.dpSet1%> </td>
+                        <td> <%= exercise.dpSet2%> </td>
+                        <td> <%= exercise.dpSet3%> </td>
+                    </tr>
+                    <tr id="records">
+                        <td> <input name="cgpSet1" id="cgpSet1" type="number" value="<%= exercise.cgpSet1%>"> </td>
+                        <td> <input name="cgpSet2" id="cgpSet2" type="number" value="<%= exercise.cgpSet2%>"> </td>
+                        <td> <input name="cgpSet3" id="cgpSet3" type="number" value="<%= exercise.cgpSet3%>"> </td>
+                        <td> <input name="pcfSet1" id="pcfSet1" type="number" value="<%= exercise.pcfSet1%>"> </td>
+                        <td> <input name="pcfSet2" id="pcfSet2" type="number" value="<%= exercise.pcfSet2%>"> </td>
+                        <td> <input name="pcfSet3" id="pcfSet3" type="number" value="<%= exercise.pcfSet3%>"> </td>
+                        <td> <input name="dpSet1" id="dpSet1" type="number" value="<%= exercise.dpSet1%>"> </td>
+                        <td> <input name="dpSet2" id="dpSet2" type="number" value="<%= exercise.dpSet2%>"> </td>
+                        <td> <input name="dpSet3" id="dpSet3" type="number" value="<%= exercise.dpSet3%>"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div id="exerciseImg">
+            <img src="<%=apiData[487].gifUrl%>" alt="">
+            <img src="<%=apiData[506].gifUrl%>" alt="">
+            <img src="<%=apiData[456].gifUrl%>" alt="">
+        </div>
+
+    </div>
+
+    <div id="exerciseContainer">
+        <div id="exerciseTable">
+            <table>
+                <thead>
+                    <tr id="set">
+                        <th colspan="4"> Single Set</th>
+                    </tr>
+                    <tr id="exercise">
+                        <th colspan="4">Tricep Extensions</th>
+                    </tr>
+                    <tr id="reps">
+                        <th>15 REPS</th>
+                        <th>12 REPS</th>
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <%= exercise.teSet1%> </td>   
+                        <td> <%= exercise.teSet2%> </td>   
+                        <td> <%= exercise.teSet3%> </td>   
+                        <td> <%= exercise.teSet4%> </td>   
+                    </tr>
+                    <tr id="records">
+                        <td> <input name="teSet1" id="teSet1" type="number" value="<%= exercise.teSet1%>"> </td>
+                        <td> <input name="teSet2" id="teSet2" type="number" value="<%= exercise.teSet2%>"> </td>
+                        <td> <input name="teSet3" id="teSet3" type="number" value="<%= exercise.teSet3%>"> </td>
+                        <td> <input name="teSet4" id="teSet4" type="number" value="<%= exercise.teSet4%>"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div id="exerciseImg">
+            <img src="<%=apiData[141].gifUrl%>" alt="">
+        </div>
+
+    </div>
+
+
+    <div id="exerciseContainer">
+        <div id="exerciseTable">
+            <table>
+                <thead>
+                    <tr id="set">
+                        <th colspan="7"> Super Set</th>
+                    </tr>
+                    <tr id="exercise">
+                        <th colspan="4">Single Arm Kickback</th>
+                        <th colspan="3">Tricep Push-up</th>
+                    </tr>
+                    <tr id="reps">
+                        <th>15 REPS</th>
+                        <th>12 REPS</th>
+                        <th>8 REPS</th>
+                        <th>8 REPS</th>
+                        <th>FAILURE</th>
+                        <th>FAILURE</th>
+                        <th>FAILURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <%= exercise.sakSet1%> </td>   
+                        <td> <%= exercise.sakSet2%> </td>   
+                        <td> <%= exercise.sakSet3%> </td>   
+                        <td> <%= exercise.sakSet4%> </td>   
+                        <td> <%= exercise.tpSet1%> </td>   
+                        <td> <%= exercise.tpSet2%> </td>   
+                        <td> <%= exercise.tpSet3%> </td> 
+                    </tr>
+                    <tr id="records">
+                        <td> <input name="sakSet1" id="sakSet1" type="number" value="<%= exercise.sakSet1%>"> </td>
+                        <td> <input name="sakSet2" id="sakSet2" type="number" value="<%= exercise.sakSet2%>"> </td>
+                        <td> <input name="sakSet3" id="sakSet3" type="number" value="<%= exercise.sakSet3%>"> </td>
+                        <td> <input name="sakSet4" id="sakSet4" type="number" value="<%= exercise.sakSet4%>"> </td>
+                        <td> <input name="tpSet1" id="tpSet1" type="number" value="<%= exercise.tpSet1%>"> </td>
+                        <td> <input name="tpSet2" id="tpSet2" type="number" value="<%= exercise.tpSet2%>"> </td>
+                        <td> <input name="tpSet3" id="tpSet3" type="number" value="<%= exercise.tpSet3%>"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div id="exerciseImg">
+            <img src="<%=apiData[593].gifUrl%>" alt="">
+            <img src="<%=apiData[442].gifUrl%>" alt="">
+        </div>
+
+    </div>
+
+
+    <div id="exerciseContainer">
+        <div id="exerciseTable">
+            <table>
+                <thead>
+                    <tr id="set">
+                        <th colspan="2"> Super Set</th>
+                    </tr>
+                    <tr id="exercise">
+                        <th colspan="1">Dips</th>
+                        <th colspan="1">In and Outs</th>
+                    </tr>
+                    <tr id="reps">
+                        <th>FAILURE</th>
+                        <th>FAILURE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <%= exercise.dSet1%> </td>   
+                        <td> <%= exercise.ioSet1%> </td> 
+                    </tr>
+                    <tr id="records">
+                        <td> <input name="dSet1" id="dSet1" type="number" value="<%= exercise.dSet1%>"> </td>
+                        <td> <input name="ioSet1" id="ioSet1" type="number" value="<%= exercise.ioSet1%>"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div id="exerciseImg">
+            <img src="<%=apiData[593].gifUrl%>" alt="">
+            <img src="<%=apiData[1312].gifUrl%>" alt="">
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+
+    <a href="/home"><button>Back to Homepage</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <table>
+        <thead>
+            <tr id="set">
+                <th></th>
+                <th colspan="4">Single Set</th>
+                <th colspan="7">Super Set</th>
+                <th colspan="9">Giant Set</th>
+                <th colspan="4">Single Set</th>
+                <th colspan="7">Super Set</th>
+                <th colspan="2">Super Set</th>
+            </tr>
+            <tr id="exercise">
+                <th></th>
+                <th colspan="4">Dumbbell Chest Press</th>
+                <th colspan="3">Incline Dumbbell Fly</th>
+                <th colspan="4">Incline Dumbbell Press</th>
+                <th colspan="3">Close Grip Press</th>
+                <th colspan="3">Partial Chest Fly</th>
+                <th colspan="3">Decline Push-up</th>
+                <th colspan="4">Tricep Extensions</th>
+                <th colspan="4">Single Arm Kickback</th>
+                <th colspan="3">Tricep Push-up</th>
+                <th colspan="1">Dips</th>
+                <th colspan="1">In and Outs</th>
+            </tr>
+            <tr id="reps">
+                <th></th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>               
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>15 REPS</th>
+                <th>12 REPS</th>
+                <th>8 REPS</th>
+                <th>8 REPS</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+                <th>FAILURE</th>
+            </tr>
+
+        </thead>
+        <tbody>         
+            <tr>
+                <td>%=exercise.date%></td>
+                <td> %= exercise.dcpSet1%> </td>
+                <td> %= exercise.dcpSet2%> </td>
+                <td> %= exercise.dcpSet3%> </td>
+                <td> %= exercise.dcpSet4%> </td>
+                <td> %= exercise.idfSet1%> </td>
+                <td> %= exercise.idfSet2%> </td>
+                <td> %= exercise.idfSet3%> </td>
+                <td> %= exercise.idpSet1%> </td>
+                <td> %= exercise.idpSet2%> </td>
+                <td> %= exercise.idpSet3%> </td>
+                <td> %= exercise.idpSet4%> </td>
+                <td> %= exercise.cgpSet1%> </td>
+                <td> %= exercise.cgpSet2%> </td>
+                <td> %= exercise.cgpSet3%> </td>
+                <td> %= exercise.pcfSet1%> </td>
+                <td> %= exercise.pcfSet2%> </td>
+                <td> %= exercise.pcfSet3%> </td>
+                <td> %= exercise.dpSet1%> </td>
+                <td> %= exercise.dpSet2%> </td>
+                <td> %= exercise.dpSet3%> </td>
+                <td> %= exercise.teSet1%> </td>   
+                <td> %= exercise.teSet2%> </td>   
+                <td> %= exercise.teSet3%> </td>   
+                <td> %= exercise.teSet4%> </td>   
+                <td> %= exercise.sakSet1%> </td>   
+                <td> %= exercise.sakSet2%> </td>   
+                <td> %= exercise.sakSet3%> </td>   
+                <td> %= exercise.sakSet4%> </td>   
+                <td> %= exercise.tpSet1%> </td>   
+                <td> %= exercise.tpSet2%> </td>   
+                <td> %= exercise.tpSet3%> </td>   
+                <td> %= exercise.dSet1%> </td>   
+                <td> %= exercise.ioSet1%> </td>      
+            </tr>
+            <tr id="records">
+                <form action="/updateChestAndTrisLog/%=exercise._id%>" method="post">
+                    <td> <input name="date" id="date" type="date" value="%=exercise.date%>"> </td>
+                    <td> <input name="dcpSet1" id="dcpSet1" type="number" value="%= exercise.dcpSet1%>"> </td>
+                    <td> <input name="dcpSet2" id="dcpSet2" type="number" value="%= exercise.dcpSet2%>"> </td>
+                    <td> <input name="dcpSet3" id="dcpSet3" type="number" value="%= exercise.dcpSet3%>"> </td>
+                    <td> <input name="dcpSet4" id="dcpSet4" type="number" value="%= exercise.dcpSet4%>"> </td>
+                    <td> <input name="idfSet1" id="idfSet1" type="number" value="%= exercise.idfSet1%>"> </td>
+                    <td> <input name="idfSet2" id="idfSet2" type="number" value="%= exercise.idfSet2%>"> </td>
+                    <td> <input name="idfSet3" id="idfSet3" type="number" value="%= exercise.idfSet3%>"> </td>
+                    <td> <input name="idpSet1" id="idpSet1" type="number" value="%= exercise.idpSet1%>"> </td>
+                    <td> <input name="idpSet2" id="idpSet2" type="number" value="%= exercise.idpSet2%>"> </td>
+                    <td> <input name="idpSet3" id="idpSet3" type="number" value="%= exercise.idpSet3%>"> </td>
+                    <td> <input name="idpSet4" id="idpSet4" type="number" value="%= exercise.idpSet4%>"> </td>
+                    <td> <input name="cgpSet1" id="cgpSet1" type="number" value="%= exercise.cgpSet1%>"> </td>
+                    <td> <input name="cgpSet2" id="cgpSet2" type="number" value="%= exercise.cgpSet2%>"> </td>
+                    <td> <input name="cgpSet3" id="cgpSet3" type="number" value="%= exercise.cgpSet3%>"> </td>
+                    <td> <input name="pcfSet1" id="pcfSet1" type="number" value="%= exercise.pcfSet1%>"> </td>
+                    <td> <input name="pcfSet2" id="pcfSet2" type="number" value="%= exercise.pcfSet2%>"> </td>
+                    <td> <input name="pcfSet3" id="pcfSet3" type="number" value="%= exercise.pcfSet3%>"> </td>
+                    <td> <input name="dpSet1" id="dpSet1" type="number" value="%= exercise.dpSet1%>"> </td>
+                    <td> <input name="dpSet2" id="dpSet2" type="number" value="%= exercise.dpSet2%>"> </td>
+                    <td> <input name="dpSet3" id="dpSet3" type="number" value="%= exercise.dpSet3%>"> </td>
+                    <td> <input name="teSet1" id="teSet1" type="number" value="%= exercise.teSet1%>"> </td>
+                    <td> <input name="teSet2" id="teSet2" type="number" value="%= exercise.teSet2%>"> </td>
+                    <td> <input name="teSet3" id="teSet3" type="number" value="%= exercise.teSet3%>"> </td>
+                    <td> <input name="teSet4" id="teSet4" type="number" value="%= exercise.teSet4%>"> </td>
+                    <td> <input name="sakSet1" id="sakSet1" type="number" value="%= exercise.sakSet1%>"> </td>
+                    <td> <input name="sakSet2" id="sakSet2" type="number" value="%= exercise.sakSet2%>"> </td>
+                    <td> <input name="sakSet3" id="sakSet3" type="number" value="%= exercise.sakSet3%>"> </td>
+                    <td> <input name="sakSet4" id="sakSet4" type="number" value="%= exercise.sakSet4%>"> </td>
+                    <td> <input name="tpSet1" id="tpSet1" type="number" value="%= exercise.tpSet1%>"> </td>
+                    <td> <input name="tpSet2" id="tpSet2" type="number" value="%= exercise.tpSet2%>"> </td>
+                    <td> <input name="tpSet3" id="tpSet3" type="number" value="%= exercise.tpSet3%>"> </td>
+                    <td> <input name="dSet1" id="dSet1" type="number" value="% exercise.dSet1%>"> </td>
+                    <td> <input name="ioSet1" id="ioSet1" type="number" value="% exercise.ioSet1%>"> </td>
+                    <button type="submit">Update</button>
+                </form>
+            </tr>
+        </tbody>
+    </table> -->
+
+</body>
+</html>
