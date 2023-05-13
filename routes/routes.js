@@ -13,6 +13,7 @@ const router = express.Router()
 
 //---------------------------------------------------------------------------
 //Homepage
+router.get("/", (request, response) => response.redirect("/login"))
 router.get("/bespokeFitness", bespokeFitness)
 router.get("/home", isAuth, homepage)
 
